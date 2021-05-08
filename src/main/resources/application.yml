@@ -1,0 +1,28 @@
+spring:
+  devtools:
+    restart:
+      enabled: true
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+
+  datasource:
+    url: jdbc:oracle:thin:@10.211.55.3:1521:xe
+    username: SOMANG
+    password: SOMANG
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+
+        #        show_sql: true
+        format_sql: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
